@@ -1,26 +1,25 @@
-# Stream sales demo skills
+# Stream GTM skills
 
-Reusable AI instructions for researching a SaaS prospect, building a tailored billing demo, and adapting a Stream Canva presentation.
+**For agents: read [AGENTS.md](AGENTS.md) first.** It routes the request to the right skill. The two SaaS skills are the starting point for SaaS work; the general skills support other sectors and reusable implementation details.
 
-These skills capture the reusable workflow from previous demo projects. They contain no client conversations, credentials, account records, private source decks, or client-specific implementation files.
+| What you need | Use this skill |
+| --- | --- |
+| SaaS slides tailored to a prospect | [stream-saas-deck](skills/stream-saas-deck/SKILL.md) |
+| SaaS website with recurring and UBB stories | [stream-saas-demo](skills/stream-saas-demo/SKILL.md) |
+| Both the website and slides | Read both SaaS skills and keep one shared product/pricing manifest. |
+| General client demo outside SaaS | [stream-client-demo](skills/stream-client-demo/SKILL.md) |
+| Adapt a school or other non-SaaS deck | [stream-client-deck](skills/stream-client-deck/SKILL.md) |
 
-## What is included
+## Give this repo to your AI
 
-- **[stream-client-demo](skills/stream-client-demo/SKILL.md)** — research the client, choose a credible pricing story, recreate its product experience, connect an authorized sandbox, and prepare the presenter handoff.
-- **[stream-client-deck](skills/stream-client-deck/SKILL.md)** — copy an existing Stream deck, personalize native content and screenshots, and verify the saved result.
+> Read AGENTS.md in this repository and select the right skills. Research [client website], make a tailored SaaS demo with recurring subscribe-and-manage and usage-based billing stories, and create a separate copy of [source Canva deck]. Use appropriate client products and pricing units, a clean Link-like embedded checkout, the real Stream sandbox portal and matching merchant records. Keep the source work intact and verify the website and saved slides.
 
-## Use with your AI
+Supply the client website, source deck, requested language and authorized sandbox separately. For a deck-only or website-only request, say so; the agent should not create extra deliverables.
 
-Download this repository and place the two skill folders in your AI tool’s skill directory, or attach the relevant `SKILL.md` and references to the task. In Codex, the user skill directory is `~/.codex/skills/`.
+The SaaS website skill covers both customer journeys, billing continuity, appropriate products, KYC/KYB handoffs, idempotent sandbox setup, reset, invoices and presenter notes. The SaaS deck skill covers the source copy, client-specific narrative, native Canva content, screenshots and saved-deck verification.
 
-Give the AI the client’s official website, the source presentation, the requested language and the authorized sandbox account. Then ask:
+## Installation
 
-> Use stream-client-demo and stream-client-deck to research this client, build a tailored website demo, and create a separate copy of the presentation. Keep existing work intact. Verify the live customer journey and the saved slides. Keep credentials server-side and label proposed pricing in the presenter notes.
+Download the repository and place the desired folders from `skills/` in your AI tool’s skill directory. Codex uses `~/.codex/skills/`. You can also attach the relevant SKILL.md and its linked references directly to the task. Keep linked supporting folders available.
 
-Start with [Stream’s API documentation](https://docs.streampay.sa/) for current integration details. Tool access and sandbox credentials are supplied separately; this repository does not grant access.
-
-## Delivery standard
-
-The client’s product names, terminology and buying journey should be recognizable. Show one relevant customer journey end to end. Keep proposed prices separate from published prices. Verify the real embedded checkout, consumer portal, invoices and any usage meters before describing them as working.
-
-Publishing a demo, making payments, or contacting a prospect requires the user’s authorization for that action.
+Use the [current Stream documentation](https://docs.streampay.sa/) for API details. This repository contains reusable instructions, not credentials, client conversations, private decks or account records. It does not grant access to Stream, Canva or a hosting provider.
