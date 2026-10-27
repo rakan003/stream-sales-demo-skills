@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stream Client Demo"
+  short_description: "Client research and connected Stream billing stories"
+  default_prompt: "Use $stream-client-demo to research this client and build a faithful website with coherent Stream billing stories."
