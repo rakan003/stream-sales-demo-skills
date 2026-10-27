@@ -1,0 +1,4 @@
+interface:
+  display_name: "Stream Client Deck"
+  short_description: "Personalize Stream Canva decks for new clients"
+  default_prompt: "Use $stream-client-deck to create a separate Canva presentation for this client, updating names, logos, payment screenshots, and their website image while preserving the source design."
